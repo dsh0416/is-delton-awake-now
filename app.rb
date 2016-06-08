@@ -26,8 +26,14 @@ get '/' do
   erb :index, locals: {result: result}
 end
 
-get '/update' do
+get '/awake' do
   protected!
-  result = !result
-  result ? 'Yes Updated' : 'Nope Updated'
+  result = true
+  result
+end
+
+get '/asleep' do
+  protected!
+  result = false
+  result
 end
