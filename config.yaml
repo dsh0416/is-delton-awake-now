@@ -1,0 +1,12 @@
+authority:
+  username: admin
+  password: admin
+title: Is Delton Awake Now
+default: nope
+option:
+  yep:
+      text: Yep
+      color: 66CC99
+  nope:
+      text: Nope
+      color: CC0066
