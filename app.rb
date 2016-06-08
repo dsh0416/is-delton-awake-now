@@ -30,10 +30,12 @@ get '/awake' do
   protected!
   result = true
   result
+  'Awake'
 end
 
 get '/asleep' do
   protected!
   result = false
   result
+  'Asleep'
 end
