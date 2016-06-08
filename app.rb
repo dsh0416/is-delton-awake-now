@@ -4,9 +4,6 @@ require 'yaml'
 
 configure {set :server, :puma}
 $config =  YAML.load_file('./config.yaml')
-puts $config
-
-$authority = JSON.parse(File.read('./config.json'))['authority']
 
 helpers do
   def protected!
