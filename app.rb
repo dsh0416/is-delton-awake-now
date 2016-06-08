@@ -29,5 +29,5 @@ end
 get '/update' do
   protected!
   result = !result
-  'OK'
+  result ? 'Yes Updated' : 'Nope Updated'
 end
