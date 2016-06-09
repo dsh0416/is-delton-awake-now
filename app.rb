@@ -19,14 +19,16 @@ helpers do
 end
 
 result = $config['option'][$config['default']]
+time = Time.now.to_i
 
 get '/' do
-  erb :index, locals: {result: result, title: $config['title']}
+  erb :index, locals: {result: result, title: $config['title'], time: time}
 end
 
 get '/:option' do |option|
   protected!
   return 'No that option' if $config['option'][option].nil?
   result = $config['option'][option]
+  time = Time.now.to_i
   result['text']
 end
